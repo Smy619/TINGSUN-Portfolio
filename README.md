@@ -1,2 +1,2 @@
 # TINGSUN-Portfolio
-My portfolio site to showcase my frontend work.
+De l’architecture à l’intégration, je construis des sites clairs, solides et fidèles à vos maquettes
