@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sun Solène</title>
+  <meta name="description" content="Portfolio & Vlog monochrome de Sun Solène." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src="/script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu principal</a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/index.html">Sun Solène</a>
+    <nav class="links" aria-label="Navigation principale">
+      <a data-i18n="nav.projects" href="/projets.html">Projets</a>
+      <a data-i18n="nav.vlog" href="/vlog.html">Vlog</a>
+      <a data-i18n="nav.about" href="/index.html#about">À propos</a>
+      <a data-i18n="nav.contact" href="/index.html#contact" class="btn">Contact</a>
+      <a data-i18n="nav.cv" href="/cv.pdf" class="btn solid" target="_blank" rel="noopener">Télécharger le CV</a>
+      <span class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="fr" data-lang="fr" onclick="setLang('fr')" aria-pressed="true">FR</button>
+        <button type="button" class="en" data-lang="en" onclick="setLang('en')" aria-pressed="false">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+<main id="main" class="container">
+
+<section class="hero fade" aria-labelledby="hero-title">
+  <div>
+    <h1 id="hero-title" data-i18n="hero.title">Intégrateur Web montée en React</h1>
+    <p class="muted" data-i18n="hero.desc"></p>
+    <div class="cta">
+      <a class="btn solid" href="/projets.html" data-i18n="hero.cta.projects">Voir les projets</a>
+      <a class="btn" href="/vlog.html" data-i18n="hero.cta.vlog">Lire le Vlog</a>
+    </div>
+  </div>
+  <div>
+    <img class="portrait" src="https://picsum.photos/640/400?grayscale" alt="Visuel monochrome" />
+  </div>
+</section>
+
+<section id="about" class="fade" aria-labelledby="about-title">
+  <div class="section-title">
+    <h2 id="about-title" data-i18n="about.title">Compétences & outils</h2>
+    <span class="muted" data-i18n="about.badge">Mise à jour continue</span>
+  </div>
+  <div class="skills">
+    <div class="skill"><strong data-i18n="about.front">Front de base</strong><span class="muted" data-i18n="about.front.desc">HTML5 • CSS3/SCSS • Responsive • Sémantique • Accessibilité</span></div>
+    <div class="skill"><strong data-i18n="about.js">JavaScript</strong><span class="muted" data-i18n="about.js.desc">ES6+ • Modules • Animations légères • API</span></div>
+    <div class="skill"><strong data-i18n="about.frameworks">Frameworks</strong><span class="muted" data-i18n="about.frameworks.desc">React (en cours) • Vite • (Next.js à venir)</span></div>
+    <div class="skill"><strong data-i18n="about.tools">Outils</strong><span class="muted" data-i18n="about.tools.desc">Git/GitHub • Figma • VS Code • Lighthouse</span></div>
+  </div>
+</section>
+
+<section id="contact" class="fade" aria-labelledby="contact-title">
+  <div class="section-title">
+    <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+    <span class="muted" data-i18n="contact.badge">Réponse sous 24–48h</span>
+  </div>
+  <form class="contact" name="contact" action="https://formspree.io/f/your-id" method="POST">
+    <div class="field">
+      <label for="name" data-i18n="contact.name">Nom</label>
+      <input class="input" id="name" name="name" type="text" required />
+    </div>
+    <div class="field">
+      <label for="email" data-i18n="contact.email">Email</label>
+      <input class="input" id="email" name="email" type="email" required />
+    </div>
+    <div class="field" style="grid-column:1/-1">
+      <label for="message" data-i18n="contact.message">Message</label>
+      <textarea class="textarea" id="message" name="message" required></textarea>
+    </div>
+    <div>
+      <button class="btn solid" type="submit" data-i18n="contact.send">Envoyer</button>
+    </div>
+  </form>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Sun Solène — <span class="muted" data-i18n="footer.note"></span></p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

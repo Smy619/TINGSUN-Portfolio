@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Article — Sun Solène</title>
+  <meta name="description" content="Portfolio & Vlog monochrome de Sun Solène." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src="/script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu principal</a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/index.html">Sun Solène</a>
+    <nav class="links" aria-label="Navigation principale">
+      <a data-i18n="nav.projects" href="/projets.html">Projets</a>
+      <a data-i18n="nav.vlog" href="/vlog.html">Vlog</a>
+      <a data-i18n="nav.about" href="/index.html#about">À propos</a>
+      <a data-i18n="nav.contact" href="/index.html#contact" class="btn">Contact</a>
+      <a data-i18n="nav.cv" href="/cv.pdf" class="btn solid" target="_blank" rel="noopener">Télécharger le CV</a>
+      <span class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="fr" data-lang="fr" onclick="setLang('fr')" aria-pressed="true">FR</button>
+        <button type="button" class="en" data-lang="en" onclick="setLang('en')" aria-pressed="false">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+<main id="main" class="container">
+
+<section class="fade" aria-labelledby="post-title">
+  <div class="section-title">
+    <h2 id="post-title" data-i18n="article.model.title">Modèle d’article</h2>
+    <span class="muted" data-i18n="article.model.subtitle">Structure de base pour vos billets</span>
+  </div>
+  <article>
+    <p class="muted" data-i18n="article.model.summary">Résumé : une introduction courte...</p>
+    <h3 data-i18n="article.model.context">Contexte</h3>
+    <p>Expliquez le “pourquoi” : objectif, contrainte, résultat attendu.</p>
+    <h3 data-i18n="article.model.steps">Étapes</h3>
+    <ol>
+      <li>Design en noir & blanc, typographie et grille.</li>
+      <li>Layout et composants réutilisables.</li>
+      <li>Déploiement sur GitHub Pages et DNS.</li>
+    </ol>
+    <h3 data-i18n="article.model.resources">Ressources</h3>
+    <ul>
+      <li>Démo (à venir)</li>
+      <li>Repo GitHub (à venir)</li>
+    </ul>
+  </article>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Sun Solène — <span class="muted" data-i18n="footer.note">Fait à la main en HTML/CSS (GitHub Pages).</span></p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
